@@ -1,0 +1,159 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;     
+    font-family: Helvetica, sans-serif;
+}
+
+header {
+    color: black;
+    background-color: whitesmoke;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+    list-style: none;
+    margin: 0;
+    padding: 0 1em;
+    height: 70px;
+}
+
+.logo-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.link-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 160px;
+    padding: 0.6em;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 200;
+}
+
+.logo {
+    font-size: 0.88rem;
+    font-weight: 200;
+}
+
+.logo-img {
+    width: 100px; 
+    flex-shrink: 1;
+}
+
+
+/* Featured Blog */
+
+
+.hero-section {
+    position: relative;
+    color: white;
+    height: 28vh;
+    padding: 1em;
+}
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -99 !important;
+}
+
+.hero-section article {
+    display: grid;
+    grid-template: 1fr 2fr / minmax(100px, 670px) 1fr;
+    height: 100%;
+}
+
+.hero-section p:nth-of-type(1) {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    margin: 0;
+    grid-column: 1;
+    grid-row: 2;
+    align-self: end;
+}
+
+.hero-section h1 {
+    font-size: 2rem;
+    margin: 0.3em 0;
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.hero-section p:nth-of-type(2) {
+    font-size: 1rem;
+    margin: 0 0 0.5em 0;
+    grid-column: 1;
+    grid-row: 4;
+}
+
+/* Blogs Container */
+
+.blogs-container {
+    display: grid;
+    grid-template: repeat(6, auto) / repeat(auto-fill, minmax(400px, 1fr)) ;
+    width: 100%;
+}
+
+.blog-images {
+    object-fit: cover;
+    object-position: center;
+}
+
+.blog-One,
+.blog-Two,
+.blog-Three {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.viewMore-Btn {
+    text-align: center;
+    margin: 0 auto 2em;
+    width: auto;
+}
+
+button {
+    font-weight: bold;
+    font-size: 0.8rem;
+    border: none;
+    background: none;
+    text-decoration: underline;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive: Larger Screens */
+
+@media (min-width: 780px) {
+    .hero-section {
+        height: 50vh;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+}
+
+
+
+
