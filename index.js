@@ -36,9 +36,9 @@ function getblogsSection(limit = articles.length) {
         <section class="blog-One">
             <img class="blog-images" src="${blog.image}" alt="computer on desk">
             <article>
-                <p>${blog.date}</p>
-                <h1>${blog.title}</h1>
-                <p>
+                <p class="art-date">${blog.date}</p>
+                <h1 class="art-title">${blog.title}</h1>
+                <p class="art-content">
                     ${blog.content}
                 </p>
             </article>
@@ -50,11 +50,15 @@ function getblogsSection(limit = articles.length) {
 
 
 function render() {
-    heroSection.innerHTML = getHeroSection();
+    const currentPage = window.location.pathname.split('/').pop();
+
+    if (currentPage === 'index.html' || currentPage === '') {
+        heroSection.innerHTML = getHeroSection();
+    }
+
     const screenWidth = window.innerWidth;
     const initialBlogsToShow = screenWidth < 780 ? 3 : 4;
     blogsSection.innerHTML = getblogsSection(initialBlogsToShow);
 }
 
-
-render()
+render();

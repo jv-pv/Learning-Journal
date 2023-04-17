@@ -110,8 +110,9 @@ a {
 
 .blogs-container {
     display: grid;
-    grid-template: repeat(6, auto) / repeat(auto-fill, minmax(400px, 1fr)) ;
+    grid-template: repeat(8, auto) / repeat(auto-fill, minmax(400px, 1fr)) ;
     width: 100%;
+    margin-top: 1.5em;
 }
 
 .blog-images {
@@ -130,6 +131,18 @@ a {
     display: flex;
     flex-direction: column;
     padding: 1em;
+}
+
+.art-date {
+    margin: 0.5em 0;
+}
+
+.art-title {
+    margin: 0;
+}
+
+.art-content {
+    margin: 0.5em 0 1em;
 }
 
 .viewMore-Btn {
@@ -151,13 +164,122 @@ button {
 
 /* Responsive: Larger Screens */
 
+
+
+/* About-Me CSS  */
+
+.about-me-section,
+.about-me-body {
+    display: flex;
+}
+
+.about-me-section {
+    flex-direction: column;
+    margin: 1em 1em 0;
+}
+
+.about-me-section
+h1 {
+    font-size: 2rem;
+    margin: 1em 0 0;
+}
+
+.about-me-section-body {
+    margin: 0 1em 1em;
+}
+
+.about-me-section-body 
+article
+h3 {
+    margin: 0.5em 0;
+}
+
+.about-me-portrait {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    margin-top: 1em;
+    border: 2px solid red;
+}
+
+/* Featured Blog CSS */
+
+.featured-blog-header,
+.featured-blog-body {
+    display: flex;
+    margin: 1em;
+}
+
+
+.featured-blog-header {
+    flex-direction: column;
+    
+}
+
+.featured-blog-header h3 {
+    font-size: 2rem;
+}
+
+.featured-blog-header p:nth-of-type(2) {
+    margin-bottom: 1.5em;
+    line-height: 1.4;
+}
+
+.featured-blog-header
+h3,
+.featured-blog-header
+p {
+    margin: 0.3em 0;
+}
+
+.featured-blog-body {
+    flex-direction: column;
+}
+
+.featured-blog-img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.featured-blog-body h3 {
+    margin: 1em 0 0;
+}
+
+.featured-blog-body p {
+    line-height: 1.4;
+}
+
+
+
 @media (min-width: 780px) {
+    main {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
     .hero-section {
         height: 50vh;
     }
 
     button {
         font-size: 1rem;
+    }
+
+    .about-me-section {
+        flex-direction: row;
+        gap: 1em;
+    }
+
+    .about-me-body {
+        flex-direction: column;
+    }
+
+    .about-me-portrait {
+        align-self: center;
     }
 }
 
